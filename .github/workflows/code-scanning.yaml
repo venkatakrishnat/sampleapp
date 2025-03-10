@@ -3,7 +3,7 @@ name: "Code Scanning"
 on:
   push:
     branches:
-      - main1  # Change if you're using a different default branch like 'master'
+      - main  # Change if you're using a different default branch like 'master'
 
 permissions:
   security-events: write

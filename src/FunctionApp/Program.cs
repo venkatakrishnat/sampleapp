@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 var builder = FunctionsApplication.CreateBuilder(args);
+var apiKey = "hello123";
 
 builder.ConfigureFunctionsWebApplication();
 

@@ -1,7 +1,5 @@
 using System;
 
-var apiKey = "hello123";
-
 public class HardcodedSecretsExample
 {
     public void ConnectToDatabase()

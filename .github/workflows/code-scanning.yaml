@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # Change if you're using a different default branch like 'master'
+  pull_request:
+    branches: [ "main" ]
 
 permissions:
   security-events: write

@@ -7,7 +7,7 @@ class Program
     static void Main(string[] args)
     {
         // Issue 1: Hardcoded Password (Sensitive Information Exposure)
-        string password = "SuperSecretPassword";  // Hardcoded secret
+        string password = "ghp_16chars_examplelongtoken123456789";  // Hardcoded secret
 
         // Issue 2: SQL Injection (Unescaped User Input in SQL Query)
         string userInput = "123'; DROP TABLE Users; --"; // Malicious user input

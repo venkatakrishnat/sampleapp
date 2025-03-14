@@ -101,9 +101,9 @@ jobs:
         
     # - name: Upload CodeQL results
     #   uses: github/codeql-action/upload-results@v3
-    # - name: Upload SARIF file to GitHub Code Scanning
-    #   uses: github/codeql-action/upload-sarif@v3
-    #   with:
-    #     sarif_file: /home/runner/work/SampleWebApp/results/csharp.sarif
+    - name: Upload SARIF file to GitHub Code Scanning
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: /home/runner/work/sampleapp/results/csharp.sarif
     #   env:
     #     GITHUB_TOKEN: ${{ secrets.PAT }}

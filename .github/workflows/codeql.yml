@@ -99,17 +99,17 @@ jobs:
       with:
         category: "/language:${{matrix.language}}"
 
-    - name: Upload zip file as an artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: sarif-file
-        path: /home/runner/work/_temp/codeql_databases/${{ matrix.language }}.zip
+    # - name: Upload zip file as an artifact
+    #   uses: actions/upload-artifact@v3
+    #   with:
+    #     name: sarif-file
+    #     path: /home/runner/work/_temp/codeql_databases/${{ matrix.language }}.zip
         
     # - name: Upload CodeQL results
     #   uses: github/codeql-action/upload-results@v3
-    # - name: Upload SARIF file to GitHub Code Scanning
-    #   uses: github/codeql-action/upload-sarif@v3
-    #   with:
-    #     sarif_file: /home/runner/work/sampleapp/results/csharp.sarif
+    - name: Upload SARIF file to GitHub Code Scanning
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: /home/runner/work/_temp/codeql_databases/${{ matrix.language }}.zip
     #   env:
     #     GITHUB_TOKEN: ${{ secrets.PAT }}
